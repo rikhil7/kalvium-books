@@ -1,4 +1,4 @@
-import { FETCHING, SEARCH } from "./actionType";
+import { FETCHING, SEARCH, STORE_FORM_DATA } from "./actionType";
 
 export const fetchData = (books) => {
   return {
@@ -7,10 +7,15 @@ export const fetchData = (books) => {
   };
 };
 export const searchBooks = (query) => {
-    console.log(query)
-    return {
-      type: SEARCH,
-      payload: query,
-    };
+  return {
+    type: SEARCH,
+    payload: query,
   };
-
+};
+export const storeFormData = (data) => {
+    console.log(data)
+  return {
+    type: STORE_FORM_DATA,
+    payload: data,
+  };
+};

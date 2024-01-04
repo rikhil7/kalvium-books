@@ -1,7 +1,8 @@
 //^ Making a reducer for implenting functionality of Redux Store
 const initialState={
     books:[],
-    query:""
+    query:"",
+    formData: {}
 }
 
 export const reducer = (storeData=initialState, action) => {
@@ -14,6 +15,10 @@ export const reducer = (storeData=initialState, action) => {
     case "SEARCH":
         return{
             ...storeData,query:action.payload
+        }
+    case "STORE_FORM_DATA":
+        return{
+            ...storeData,  formData: action.payload
         }
     default:
       return storeData;
