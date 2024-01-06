@@ -7,9 +7,13 @@
 body {
   background: rgb(255, 255, 248);
 }
+#app{
+  display: flex;
+  flex-direction: column;
+}
 #navbar {
   /* position: fixed; */
-  /* height: 8vh; */
+  height: 9vh;
   padding: 2vmin 6vmin;
   width: 100%;
   /* border-bottom-left-radius: 10px;
@@ -18,6 +22,7 @@ body {
   border-bottom: 2px solid rgb(103, 103, 103);
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   box-shadow: 0px 1px 10px black;
 }
@@ -66,7 +71,7 @@ body {
 #search input {
   font-family: "Rubik", sans-serif;
   font-size: 2vmin;
-  width: 30vw;
+  width: 35vw;
   padding: 1.5vmin;
   background: #7c6a9632;
   backdrop-filter: blur(4px);
@@ -84,11 +89,42 @@ body {
   outline: none;
 }
 #home {
+  /* height: 91vh; */
   padding: 5vmin;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   /* gap: 6vmin; */
+}
+#form-main{
+  height: 91vh;
+  padding: 5vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blur-data{
+  width: 100vw;
+  text-align: center;
+  color: red;
+  position: absolute;
+  top: 45%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vmin;
+  font-family: "Rubik", sans-serif;
+  text-shadow: 0px 0px 10px #a09999;
+  -webkit-text-stroke: 0.1px black;
+}
+.blur-data-text{
+  font-size: 3vmax;
+}
+.blur-data-subtext{
+  font-size: 1.6vmin;
 }
 #books-main {
   /* width: 80vw; */
@@ -152,12 +188,21 @@ body {
   }
   .logo-text{
     font-size: 2.5vmin;
+    top: 0;
   }
 }
 @media (max-width: 700px) {
   .books-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  #search input{
+    width: 40vw;
+  }
+  .logo-text{
+    font-size: 2vmin;
+    position: relative;
+    top: 0px;
   }
 }
 .big-text {
@@ -235,8 +280,8 @@ legend {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   font-family: "Rubik", sans-serif;
-  position: relative;
-  top: 30vh;
+  /* position: relative;
+  top: 30vh; */
   font-size: 3vmin;
   color: red;
   border-radius: 10px;
@@ -269,8 +314,11 @@ legend {
   transform: scale(1.05);
 }
 #loading{
-  position: relative;
-  top: 25vh;
+  height: 91vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 #loading img{
   width: 10vw;

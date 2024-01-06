@@ -1,8 +1,16 @@
 //^ Making a reducer for implenting functionality of Redux Store
+const defaultFormData = ()=>{
+  if (localStorage.getItem("user-data")){
+    return (JSON.parse(localStorage.getItem("user-data")))
+  }else{
+    return ({})
+  }
+}
+
 const initialState={
     books:[],
     query:"",
-    formData: {}
+    formData: defaultFormData()
 }
 
 export const reducer = (storeData=initialState, action) => {

@@ -17,7 +17,8 @@ export default function Register() {
   const formData = useSelector((data)=>{
     return data.formData
   })
-
+  const testArr = Object.keys(formData)
+  console.log("test:", testArr)
   //^ Function that will execute for the data which is submitted
   const FormSubmitHandler = (data) => {
     console.log("data:", data);
@@ -33,7 +34,7 @@ export default function Register() {
   const confirmPass = watch("password");
   console.log(formData)
   return (
-    <div id="home">
+    <div id="form-main">
           <ToastContainer />
       {Object.keys(formData).length !=0 ? (
         <div id="successful">
@@ -55,7 +56,7 @@ export default function Register() {
                   type="text"
                   name="firstName"
                   {...register("firstName", {
-                    required: "Fill First Name",
+                    required: "Enter Your Name",
                     minLength: {
                       value: 3,
                       message: "Minimum 3 characters required",
