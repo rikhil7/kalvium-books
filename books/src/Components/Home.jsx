@@ -44,6 +44,7 @@ export default function Home() {
       document.body.style.overflow = "hidden"
       document.querySelector("#home").style.filter = "blur(10px)"
       document.querySelector("#home").style.pointerEvents = "none"
+      document.querySelector("#search input").style.pointerEvents = "none"
     }else{
       document.body.style.overflow = "auto"
       document.querySelector("#search input").style.pointerEvents = "auto"
